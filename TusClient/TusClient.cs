@@ -16,8 +16,7 @@ namespace TusClient
         // ***********************************************************************************************
         // Properties
 
-         
-
+          
         // ***********************************************************************************************
         // Events
         public delegate void UploadingEvent(long bytesTransferred, long bytesTotal);
@@ -42,25 +41,7 @@ namespace TusClient
         {
            // GetDomainName(true);
         }
-
-
-        [DllExport]
-        public static double AmazingSin(int ofs, double x, double y)
-        {
-            return y / 2 * Math.Sin(ofs * 2 * Math.PI / x);
-        }
-
-
-
-      //  [DllExport("GetDomain", CallingConvention = CallingConvention.StdCall)]
-        [DllExport]
-        static public string GetDomainName(bool result)
-        {
-            System.Security.Principal.WindowsIdentity currentUser = System.Security.Principal.WindowsIdentity.GetCurrent();
-            // Console.WriteLine(currentUser.Name.Split('\\')[0]); 
-            return currentUser.Name.Split('\\')[0];
-        }
-
+         
 
         public void Cancel()
         {
@@ -148,6 +129,7 @@ namespace TusClient
         }
         public void Upload(string URL, System.IO.Stream fs)
         {
+ 
 
             var Offset = this.getFileOffset(URL);
             var client = new TusHTTPClient();

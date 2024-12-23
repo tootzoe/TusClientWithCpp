@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TootTusUploader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TusClient.cs" />
     <Compile Include="TusHTTPRequest.cs" />

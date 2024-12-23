@@ -22,7 +22,7 @@ int main()
 
 		PEModule lib(_T("TusClient.dll"));
 		cout << ".NET TusClient.dll (netfx; C#) is ready for requests:\n\n";
-
+		 
 
 		double x2 = lib.call<double>("AmazingSin", 5, 24.781, (double)11);
 		printf_s("  AmazingSin(5, 24.781, 11) == %e\n", x2);
@@ -31,6 +31,11 @@ int main()
 		const char* tmpStr = lib.call<const char*>("GetDomainName",true);
 		//printf_s("  GetDomainName(true) == %s\n", tmpStr);
 		cout << " GetDomainName(true) == " << tmpStr ;
+
+	 
+		bool IsUploaded = lib.call<bool>("TusUploadFile" , "C:/Users/thor/Pictures/livecodingPrinciple.jpg");
+		//printf_s("  AmazingSin(5, 24.781, 11) == %e\n", x2);
+		
 
 	}
 	catch (const LibraryException& ex) {
